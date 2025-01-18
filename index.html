@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuj Diwan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#research">Research</a>
+                    <a href="#publications">Publications</a>
+                    <a href="#education">Education</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <button id="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="about" class="section">
+            <div class="profile">
+                <img src="profile.jpg" alt="Anuj Diwan" class="profile-image">
+                <div class="social-links">
+                    <a href="https://twitter.com/anuj_diwan" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://scholar.google.com/citations?user=RiiYXH0AAAAJ" target="_blank" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="https://github.com/ajd12342" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/anuj-diwan-053129171/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <h1>Anuj Diwan</h1>
+            <h2>CS PhD Student at UT Austin</h2>
+            <div class="about-content">
+                <p>I am a fourth year PhD student in the Computer Science Department at the University of Texas at Austin. I am fortunate to be co-advised by Prof. David Harwath and Prof. Eunsol Choi. I am part of the broader UT NLP group.</p>
+                <p>My research interests are in the fields of Speech and Natural Language Processing. My current research focuses on stylistic and multilingual speech generation.</p>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Summer 2023</div>
+                    <div class="timeline-content">
+                        <h3>Student Researcher</h3>
+                        <p>Google DeepMind, Mountain View, CA</p>
+                        <p>Worked on multilingual speech generation.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Summer 2022</div>
+                    <div class="timeline-content">
+                        <h3>AI Research Intern</h3>
+                        <p>FAIR, Meta AI, Seattle, WA</p>
+                        <p>Worked on continual learning for on-device speech recognition.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Summer 2020</div>
+                    <div class="timeline-content">
+                        <h3>Research Intern</h3>
+                        <p>Adobe Research, Bangalore, India</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Summer 2019</div>
+                    <div class="timeline-content">
+                        <h3>Research Intern</h3>
+                        <p>UCLouvain, Belgium</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <h2>Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2021-present</div>
+                    <div class="timeline-content">
+                        <h3>PhD in Computer Science</h3>
+                        <p>University of Texas at Austin</p>
+                        <p>Advisors: Prof. David Harwath and Prof. Eunsol Choi</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2017-2021</div>
+                    <div class="timeline-content">
+                        <h3>B.Tech in Computer Science and Engineering (with Honours)</h3>
+                        <p>Indian Institute of Technology Bombay</p>
+                        <p>Minor in Statistics</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications" class="section">
+            <h2>Publications</h2>
+            <div class="publications-list">
+                <div class="publication-item">
+                    <h3 class="publication-title">Textless Speech-to-Speech Translation With Limited Parallel Data</h3>
+                    <p class="publication-authors">Anuj Diwan, Anirudh Srinivasan, David Harwath, Eunsol Choi</p>
+                    <p class="publication-venue">EMNLP 2024 Findings</p>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/pdf/2305.15405.pdf" class="button" target="_blank">PDF</a>
+                    </div>
+                </div>
+
+                <div class="publication-item">
+                    <h3 class="publication-title">When to Use Efficient Self Attention? Profiling Text, Speech and Image Transformer Variants</h3>
+                    <p class="publication-authors">Anuj Diwan, Eunsol Choi, David Harwath</p>
+                    <p class="publication-venue">ACL 2023</p>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/pdf/2306.08667.pdf" class="button" target="_blank">PDF</a>
+                        <a href="/posters/poster_acl2023_profiling_transformers.pdf" class="button" target="_blank">Poster</a>
+                    </div>
+                </div>
+
+                <div class="publication-item">
+                    <h3 class="publication-title">Continual Learning for On-Device Speech Recognition using Disentangled Conformers</h3>
+                    <p class="publication-authors">Anuj Diwan, Ching-Feng Yeh, Wei-Ning Hsu, Paden Tomasello, Eunsol Choi, David Harwath, Abdelrahman Mohamed</p>
+                    <p class="publication-venue">ICASSP 2023</p>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/pdf/2212.01393.pdf" class="button" target="_blank">PDF</a>
+                        <a href="/posters/poster_icassp2023_disconformer.pdf" class="button" target="_blank">Poster</a>
+                    </div>
+                </div>
+
+                <div class="publication-item">
+                    <h3 class="publication-title">Why is Winoground Hard? Investigating Failures in Visuolinguistic Compositionality</h3>
+                    <p class="publication-authors">Anuj Diwan*, Layne Berry*, Eunsol Choi, David Harwath, Kyle Mahowald (*Equal contribution)</p>
+                    <p class="publication-venue">EMNLP 2022</p>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/pdf/2211.00768.pdf" class="button" target="_blank">PDF</a>
+                        <a href="https://github.com/ajd12342/why-winoground-hard" class="button" target="_blank">Code</a>
+                    </div>
+                </div>
+
+                <div class="publication-item">
+                    <h3 class="publication-title">Zero-shot Video Moment Retrieval With Off-the-Shelf Models</h3>
+                    <p class="publication-authors">Anuj Diwan*, Puyuan Peng*, Raymond J. Mooney (*Equal contribution)</p>
+                    <p class="publication-venue">TL4NLP@NeurIPS 2022</p>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/pdf/2211.02178.pdf" class="button" target="_blank">PDF</a>
+                    </div>
+                </div>
+
+                <div class="publication-item">
+                    <h3 class="publication-title">Reduce and Reconstruct: ASR for Low-Resource Phonetic Languages</h3>
+                    <p class="publication-authors">Anuj Diwan, Preethi Jyothi</p>
+                    <p class="publication-venue">Interspeech 2021</p>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/pdf/2010.09322.pdf" class="button" target="_blank">PDF</a>
+                    </div>
+                </div>
+
+                <div class="publication-item">
+                    <h3 class="publication-title">Low Resource ASR: The surprising effectiveness of High Resource Transliteration</h3>
+                    <p class="publication-authors">Shreya Khare*, Ashish Mittal*, Anuj Diwan*, Sunita Sarawagi, Preethi Jyothi, Samarth Bharadwaj (*Equal contribution)</p>
+                    <p class="publication-venue">Interspeech 2021</p>
+                    <div class="publication-links">
+                        <a href="https://www.isca-speech.org/archive/pdfs/interspeech_2021/khare21_interspeech.pdf" class="button" target="_blank">PDF</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:anuj.diwan@utexas.edu">anuj.diwan@utexas.edu</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Anuj Diwan</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html> 
