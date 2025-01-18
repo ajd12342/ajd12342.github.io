@@ -1,22 +1,24 @@
 :root {
     /* Light theme */
     --bg-color: #ffffff;
-    --text-color: #2d3748;
-    --heading-color: #1a202c;
-    --link-color: #3182ce;
+    --text-color: #333333;
+    --heading-color: #1a1a1a;
+    --link-color: #BF5700;  /* UT Burnt Orange */
+    --link-hover: #8B3F00;  /* Darker shade of Burnt Orange */
     --border-color: #e2e8f0;
     --nav-bg: rgba(255, 255, 255, 0.95);
     --card-bg: #f7fafc;
 }
 
 [data-theme="dark"] {
-    --bg-color: #1a202c;
+    --bg-color: #1a1a1a;
     --text-color: #e2e8f0;
-    --heading-color: #f7fafc;
-    --link-color: #63b3ed;
-    --border-color: #2d3748;
-    --nav-bg: rgba(26, 32, 44, 0.95);
-    --card-bg: #2d3748;
+    --heading-color: #ffffff;
+    --link-color: #FF7A1A;  /* Lighter Burnt Orange for dark mode */
+    --link-hover: #BF5700;  /* UT Burnt Orange */
+    --border-color: #333333;
+    --nav-bg: rgba(26, 26, 26, 0.95);
+    --card-bg: #2d2d2d;
 }
 
 * {
@@ -34,9 +36,9 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1000px;  /* Increased from 800px */
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 2rem;
 }
 
 /* Navigation */
@@ -192,11 +194,12 @@ h2 {
     color: white;
     text-decoration: none;
     font-size: 0.9rem;
-    transition: opacity 0.2s;
+    transition: all 0.2s;
 }
 
 .button:hover {
-    opacity: 0.9;
+    background: var(--link-hover);
+    opacity: 1;
 }
 
 /* Timeline */
@@ -275,6 +278,23 @@ footer {
 
 .about-content {
     padding-top: 1rem;
+}
+
+.cv-link {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.cv-link .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+}
+
+.cv-link .button i {
+    font-size: 1.1rem;
 }
 
 /* Responsive Design */
