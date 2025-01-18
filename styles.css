@@ -333,6 +333,15 @@ footer {
     gap: 0.5rem;
     font-size: 1rem;
     padding: 0.75rem 1.5rem;
+    background: var(--card-bg);
+    color: var(--link-color);
+    border: 1px solid var(--link-color);
+}
+
+.cv-link .button:hover {
+    background: var(--link-color);
+    color: white;
+    opacity: 1;
 }
 
 .cv-link .button i {
