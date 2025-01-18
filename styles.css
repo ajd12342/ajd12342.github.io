@@ -168,21 +168,52 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
+.publication-title a {
+    color: var(--heading-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.publication-title a:hover {
+    color: var(--link-color);
+}
+
 .publication-authors {
     font-size: 0.9rem;
     color: var(--text-color);
     opacity: 0.8;
+    margin-bottom: 0.5rem;
+}
+
+.publication-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .publication-venue {
     font-style: italic;
-    margin: 0.5rem 0;
+    margin: 0;
+    font-size: 0.95rem;
 }
 
 .publication-links {
     display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: 0.5rem;
+    margin: 0;
+}
+
+.publication-links .button {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    opacity: 0.9;
+    background: var(--link-color);
+}
+
+.publication-links .button:hover {
+    opacity: 1;
+    background: var(--link-hover);
 }
 
 .button {
