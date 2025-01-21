@@ -30,4 +30,16 @@ themeToggle.addEventListener('click', () => {
 // Initialize theme on load
 document.addEventListener('DOMContentLoaded', () => {
     initializeTheme();
+
+    // CV click tracking
+    const cvLinks = document.querySelectorAll('a[href="/uploads/AnujDiwanCV.pdf"]');
+    cvLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            gtag('event', 'cv_click', {
+                'event_category': 'CV',
+                'event_label': link.getAttribute('aria-label') || 'CV Download',
+                'value': 1
+            });
+        });
+    });
 }); 
