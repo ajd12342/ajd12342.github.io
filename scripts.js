@@ -33,13 +33,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // CV click tracking
     const cvLinks = document.querySelectorAll('a[href="/uploads/AnujDiwanCV.pdf"]');
+    console.log('Found CV links:', cvLinks.length);  // Debug log
+    
     cvLinks.forEach(link => {
-        link.addEventListener('click', () => {
+        link.addEventListener('click', (e) => {
+            // Prevent the default action temporarily to ensure the event fires
+            e.preventDefault();
+            
+            console.log('CV link clicked:', link.getAttribute('aria-label')); // Debug log
+            
+            // Send GA event
             gtag('event', 'cv_click', {
                 'event_category': 'CV',
                 'event_label': link.getAttribute('aria-label') || 'CV Download',
                 'value': 1
             });
+
+            // Continue with download after a small delay to ensure event is sent
+            setTimeout(() => {
+                window.open(link.href, '_blank');
+            }, 100);
         });
     });
 }); 
