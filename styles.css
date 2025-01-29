@@ -288,11 +288,14 @@ footer p {
     display: grid;
     grid-template-columns: minmax(200px, 1fr) 2fr;
     gap: 2rem;
-    align-items: start;
+    align-items: center;
+    min-height: calc(100vh - 15rem);
 }
 
 .profile-container {
     text-align: center;
+    position: sticky;
+    top: 6rem;
 }
 
 .profile-image {
@@ -366,9 +369,11 @@ footer p {
     .about-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
+        min-height: auto;
     }
 
     .profile-container {
+        position: static;
         max-width: 300px;
         margin: 0 auto;
     }
