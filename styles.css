@@ -27,6 +27,11 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-padding-top: 5rem; /* Add padding for sticky nav */
+    scroll-behavior: smooth; /* For smooth scrolling */
+}
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
