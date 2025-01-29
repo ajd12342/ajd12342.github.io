@@ -140,7 +140,7 @@ body {
 
 /* Sections */
 .section {
-    margin: 4rem 0;
+    margin: 2rem 0;  /* Reduced from 4rem */
     padding: 2rem 0;
     border-bottom: 1px solid var(--border-color);
 }
@@ -288,8 +288,7 @@ footer p {
     display: grid;
     grid-template-columns: minmax(200px, 1fr) 2fr;
     gap: 2rem;
-    align-items: center;
-    min-height: calc(100vh - 15rem);
+    align-items: center;  /* Keep vertical centering */
 }
 
 .profile-container {
@@ -369,7 +368,6 @@ footer p {
     .about-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
-        min-height: auto;
     }
 
     .profile-container {
