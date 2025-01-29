@@ -95,11 +95,17 @@ body {
 }
 
 .profile-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    width: 220px;  /* Slightly larger */
+    height: 280px;  /* Taller for portrait aspect ratio */
+    border-radius: 12px;  /* Subtle rounded corners */
     object-fit: cover;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);  /* Subtle shadow */
+    transition: transform 0.2s ease-in-out;  /* Smooth hover effect */
+}
+
+.profile-image:hover {
+    transform: scale(1.02);  /* Slight zoom on hover */
 }
 
 .social-links {
@@ -297,14 +303,6 @@ footer p {
     top: 6rem;
 }
 
-.profile-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-}
-
 .social-links {
     display: flex;
     justify-content: center;
@@ -390,6 +388,11 @@ footer p {
 
     h2 {
         font-size: 1.5rem;
+    }
+
+    .profile-image {
+        width: 180px;
+        height: 230px;
     }
 }
 
