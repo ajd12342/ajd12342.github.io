@@ -27,9 +27,61 @@ themeToggle.addEventListener('click', () => {
     updateThemeIcon(!isDark);
 });
 
-// Initialize theme on load
+// Dropdown menu handling
+function handleNavigation() {
+    const navLinks = document.querySelector('.nav-links');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const links = Array.from(navLinks.children);
+    
+    // Function to check if nav items need to be moved to dropdown
+    function updateNavigation() {
+        const navWidth = navLinks.offsetWidth;
+        const availableWidth = navLinks.parentElement.offsetWidth - 100; // Account for theme toggle and dropdown button
+        let currentWidth = 0;
+        
+        // Reset all links
+        links.forEach(link => {
+            link.classList.remove('moved-to-dropdown');
+            link.style.display = '';
+        });
+        dropdownMenu.innerHTML = '';
+        
+        if (window.innerWidth <= 768) {
+            // Calculate which items need to be moved
+            links.forEach((link, index) => {
+                currentWidth += link.offsetWidth + 16; // Add gap
+                if (currentWidth > availableWidth && index > 1) { // Keep at least 2 items in nav
+                    link.classList.add('moved-to-dropdown');
+                    const clonedLink = link.cloneNode(true);
+                    dropdownMenu.appendChild(clonedLink);
+                }
+            });
+        }
+    }
+    
+    // Toggle dropdown
+    dropdownToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownMenu.classList.toggle('show');
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', () => {
+        dropdownMenu.classList.remove('show');
+    });
+    
+    // Update on resize
+    window.addEventListener('resize', updateNavigation);
+    
+    // Initial update
+    updateNavigation();
+}
+
+// Initialize everything on load
 document.addEventListener('DOMContentLoaded', () => {
     initializeTheme();
+    handleNavigation();
 
     // CV click tracking
     const cvLinks = document.querySelectorAll('a[href="/uploads/AnujDiwanCV.pdf"]');
