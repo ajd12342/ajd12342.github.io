@@ -83,19 +83,17 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeTheme();
     handleNavigation();
 
-    // CV click tracking
+    // CV click tracking: the link opens normally (no delayed window.open, which
+    // pop-up blockers can stop); the beacon transport delivers the event anyway
     const cvLinks = document.querySelectorAll('a[href="/uploads/AnujDiwanCV.pdf"]');
     cvLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
+        link.addEventListener('click', () => {
             gtag('event', 'cv_click', {
                 'event_category': 'CV',
                 'event_label': link.getAttribute('aria-label') || 'CV Download',
-                'value': 1
+                'value': 1,
+                'transport_type': 'beacon'
             });
-            setTimeout(() => {
-                window.open(link.href, '_blank');
-            }, 100);
         });
     });
 }); 

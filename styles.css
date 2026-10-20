@@ -389,6 +389,88 @@ footer p {
     font-size: 1.1rem;
 }
 
+.about-content > p {
+    margin-bottom: 1rem;
+}
+
+/* Publication impact (downloads, stars) */
+.publication-impact {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    opacity: 0.85;
+}
+
+.publication-impact i {
+    color: var(--link-color);
+    margin-right: 0.25rem;
+}
+
+/* News */
+.news-list {
+    list-style: none;
+}
+
+.news-list li {
+    display: grid;
+    grid-template-columns: 5.5rem 1fr;
+    gap: 1rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.news-list li:last-child {
+    border-bottom: none;
+}
+
+.news-date {
+    font-weight: 500;
+    color: var(--link-color);
+    white-space: nowrap;
+}
+
+/* Simple bulleted lists (awards, service) */
+.simple-list {
+    list-style: none;
+}
+
+.simple-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.6rem;
+}
+
+.simple-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--link-color);
+}
+
+.service-group {
+    margin-bottom: 1.5rem;
+}
+
+.service-group h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+}
+
+.news-list a,
+.simple-list a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.news-list a:hover,
+.simple-list a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
 /* Navigation Dropdown */
 .nav-dropdown {
     display: none;
@@ -467,6 +549,11 @@ footer p {
 
     .about-content {
         text-align: center;
+    }
+
+    .news-list li {
+        grid-template-columns: 5.25rem 1fr;
+        gap: 0.5rem;
     }
 
     h1 {
