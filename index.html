@@ -80,24 +80,23 @@
         </div>
     </nav>
 
-    <main class="container">
+    <main class="container page-layout">
+        <aside class="sidebar">
+            <h1 class="sidebar-name">Anuj Diwan</h1>
+            <img src="profile.jpg" alt="Anuj Diwan" class="profile-image">
+            <ul class="sidebar-links">
+                <li><a href="/uploads/AnujDiwanCV.pdf" target="_blank" aria-label="CV"><i class="fas fa-file-alt"></i><span>CV</span></a></li>
+                <li><a href="https://scholar.google.com/citations?user=RiiYXH0AAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i><span>Google Scholar</span></a></li>
+                <li><a href="mailto:anuj.diwan@utexas.edu"><i class="fas fa-envelope"></i><span>anuj.diwan@utexas.edu</span></a></li>
+                <li><a href="https://github.com/ajd12342" target="_blank"><i class="fab fa-github"></i><span>GitHub</span></a></li>
+                <li><a href="https://www.linkedin.com/in/anuj-diwan-053129171/" target="_blank"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a></li>
+                <li><a href="https://x.com/anuj_diwan" target="_blank"><i class="fab fa-x-twitter"></i><span>X (Twitter)</span></a></li>
+            </ul>
+        </aside>
+
+        <div class="page-content">
         <section id="about" class="section">
-            <div class="about-grid">
-                <div class="profile-container">
-                    <img src="profile.jpg" alt="Anuj Diwan" class="profile-image">
-                    <div class="social-links">
-                        <a href="https://x.com/anuj_diwan" target="_blank" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-                        <a href="https://scholar.google.com/citations?user=RiiYXH0AAAAJ" target="_blank" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                        <a href="https://github.com/ajd12342" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/anuj-diwan-053129171/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="/uploads/AnujDiwanCV.pdf" target="_blank" aria-label="CV"><i class="fas fa-file-alt"></i></a>
-                    </div>
-                    <div class="profile-email">
-                        <a href="mailto:anuj.diwan@utexas.edu"><i class="fas fa-envelope"></i> anuj.diwan@utexas.edu</a>
-                    </div>
-                </div>
                 <div class="about-content">
-                    <h1>Anuj Diwan</h1>
                     <div class="job-market-callout">
                         <i class="fas fa-briefcase"></i>
                         <p><strong>I am on the 2026-27 job market</strong> looking for industry Research Scientist positions. Please reach out via <a href="mailto:anuj.diwan@utexas.edu">email</a> if you see a good fit!</p>
@@ -117,20 +116,38 @@
                         </a>
                     </div>
                 </div>
-            </div>
         </section>
 
         <section id="news" class="section">
             <h2>News</h2>
+            <div class="news-scroll">
             <ul class="news-list">
                 <li><span class="news-date">Oct 2026</span><span>New paper under review on teaching speech assistants to act on vocal cues, from my Meta internship.</span></li>
                 <li><span class="news-date">Sep 2026</span><span>New paper under review on discovering interpretable acoustic features in voice-cloning TTS models.</span></li>
                 <li><span class="news-date">Aug 2026</span><span><a href="https://arxiv.org/abs/2603.28737" target="_blank">ParaSpeechCLAP</a> was shortlisted for the Best Student Paper Award at Interspeech 2026.</span></li>
+                <li><span class="news-date">Jun 2026</span><span><a href="https://arxiv.org/abs/2603.28737" target="_blank">ParaSpeechCLAP</a> accepted at Interspeech 2026.</span></li>
                 <li><span class="news-date">May 2026</span><span>Started a Research Scientist internship at Meta Superintelligence Labs in New York.</span></li>
+                <li><span class="news-date">Feb 2026</span><span><a href="http://www.lrec-conf.org/proceedings/lrec2026/pdf/2026.lrec2026-1.456.pdf" target="_blank">CS-YODAS</a> accepted at LREC 2026.</span></li>
                 <li><span class="news-date">Sep 2025</span><span>Gave an invited talk at <a href="https://sites.google.com/view/speech-ai-ttic-2025/home" target="_blank">TTIC</a> on scaling rich style-prompted text-to-speech datasets.</span></li>
                 <li><span class="news-date">Aug 2025</span><span><a href="https://arxiv.org/abs/2503.04713" target="_blank">ParaSpeechCaps</a> and <a href="https://arxiv.org/abs/2511.12347" target="_blank">VoiceCraft-X</a> accepted at EMNLP 2025.</span></li>
                 <li><span class="news-date">Jul 2025</span><span><a href="https://arxiv.org/abs/2505.19429" target="_blank">Rhapsody</a> accepted at COLM 2025.</span></li>
+                <li><span class="news-date">May 2025</span><span><a href="https://arxiv.org/abs/2509.14161" target="_blank">CS-FLEURS</a> accepted at Interspeech 2025.</span></li>
+                <li><span class="news-date">Jan 2025</span><span><a href="https://arxiv.org/abs/2411.05361" target="_blank">Dynamic-SUPERB Phase-2</a> accepted at ICLR 2025.</span></li>
+                <li><span class="news-date">Sep 2024</span><span><a href="https://arxiv.org/abs/2305.15405" target="_blank">Textless speech-to-speech translation with limited parallel data</a> accepted at EMNLP 2024 Findings.</span></li>
+                <li><span class="news-date">Jul 2024</span><span>Gave an invited talk at <a href="https://ai4bharat.iitm.ac.in/" target="_blank">AI4Bharat</a>, IIT Madras on textless speech-to-speech translation.</span></li>
+                <li><span class="news-date">Jun 2024</span><span>US patent <a href="https://patents.google.com/patent/US12014217B2/en" target="_blank">12,014,217</a> granted for scheduling ML jobs on interruptible cloud instances, from my Adobe Research internship.</span></li>
+                <li><span class="news-date">May 2023</span><span>Started a Student Researcher position at Google DeepMind in Mountain View.</span></li>
+                <li><span class="news-date">May 2023</span><span><a href="https://arxiv.org/abs/2306.08667" target="_blank">When to Use Efficient Self Attention?</a> accepted at ACL 2023.</span></li>
+                <li><span class="news-date">Feb 2023</span><span><a href="https://arxiv.org/abs/2212.01393" target="_blank">Continual learning for on-device speech recognition</a>, from my Meta FAIR internship, accepted at ICASSP 2023.</span></li>
+                <li><span class="news-date">Oct 2022</span><span><a href="https://arxiv.org/abs/2211.02178" target="_blank">Zero-shot video moment retrieval</a> accepted at the TL4NLP workshop at NeurIPS 2022.</span></li>
+                <li><span class="news-date">Oct 2022</span><span><a href="https://arxiv.org/abs/2211.00768" target="_blank">Why is Winoground Hard?</a> accepted at EMNLP 2022 (oral).</span></li>
+                <li><span class="news-date">May 2022</span><span>Started a research internship at Meta FAIR in Seattle.</span></li>
+                <li><span class="news-date">Aug 2021</span><span>Started my PhD in Computer Science at UT Austin, co-advised by David Harwath and Eunsol Choi.</span></li>
+                <li><span class="news-date">Aug 2021</span><span>Graduated from IIT Bombay with a B.Tech (Honors) in Computer Science and Engineering.</span></li>
+                <li><span class="news-date">Aug 2021</span><span><a href="https://arxiv.org/abs/2010.09322" target="_blank">Reduce and Reconstruct</a> was shortlisted for the Best Student Paper Award at Interspeech 2021.</span></li>
+                <li><span class="news-date">Jun 2021</span><span>Three papers accepted at Interspeech 2021, including the <a href="https://arxiv.org/abs/2104.00235" target="_blank">MUCS 2021</a> challenge that I co-organized.</span></li>
             </ul>
+            </div>
         </section>
 
         <section id="publications" class="section">
@@ -518,6 +535,7 @@
                 <p>&copy; 2026 Anuj Diwan • Last updated: October 2026</p>
             </div>
         </footer>
+        </div>
     </main>
 
     <script src="scripts.js"></script>

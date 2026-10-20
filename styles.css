@@ -43,7 +43,7 @@ body {
 }
 
 .container {
-    max-width: 1000px;  /* Increased from 800px */
+    max-width: 1150px;
     margin: 0 auto;
     padding: 0 2rem;
     width: 100%;  /* Ensure full width */
@@ -92,60 +92,72 @@ body {
     font-size: 1.2rem;
 }
 
-/* Profile Section */
-.profile {
-    text-align: center;
-    margin: 3rem 0;
+/* Two-column layout: the sidebar (name, photo, links) stays in view while the content scrolls */
+.page-layout {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 3.5rem;
+    align-items: start;
+}
+
+.sidebar {
+    position: sticky;
+    top: 5rem;
+    padding: 2rem 0;
+    max-height: calc(100vh - 5rem);
+    overflow-y: auto;
+}
+
+.sidebar-name {
+    font-size: 2.25rem;
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
 }
 
 .profile-image {
-    width: 220px;  /* Slightly larger */
-    height: 280px;  /* Taller for portrait aspect ratio */
-    border-radius: 12px;  /* Subtle rounded corners */
+    width: 200px;
+    height: 250px;
+    border-radius: 12px;
     object-fit: cover;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);  /* Subtle shadow */
-    transition: transform 0.2s ease-in-out;  /* Smooth hover effect */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease-in-out;
 }
 
 .profile-image:hover {
-    transform: scale(1.02);  /* Slight zoom on hover */
+    transform: scale(1.02);
 }
 
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1rem;
+.sidebar-links {
+    list-style: none;
+    margin-top: 1.25rem;
 }
 
-.social-links a {
-    color: var(--text-color);
-    font-size: 1.5rem;
-    transition: color 0.2s;
+.sidebar-links li {
+    margin-bottom: 0.55rem;
 }
 
-.social-links a:hover {
-    color: var(--link-color);
-}
-
-.profile-email {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-}
-
-.profile-email a {
+.sidebar-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
     color: var(--text-color);
     text-decoration: none;
     transition: color 0.2s;
 }
 
-.profile-email a:hover {
+.sidebar-links a:hover {
     color: var(--link-color);
 }
 
-.profile-email i {
-    margin-right: 0.5rem;
+.sidebar-links i {
+    width: 1.2rem;
+    text-align: center;
+    font-size: 1.05rem;
+    color: var(--link-color);
+}
+
+.page-content > .section:first-child {
+    margin-top: 0;
 }
 
 /* Sections */
@@ -293,39 +305,8 @@ footer p {
     gap: 0.5rem;
 }
 
-/* About Section Grid Layout */
-.about-grid {
-    display: grid;
-    grid-template-columns: minmax(200px, 1fr) 2fr;
-    gap: 2rem;
-    align-items: center;  /* Keep vertical centering */
-}
-
-.profile-container {
-    text-align: center;
-    position: sticky;
-    top: 6rem;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.social-links a {
-    color: var(--text-color);
-    font-size: 1.5rem;
-    transition: color 0.2s;
-}
-
-.social-links a:hover {
-    color: var(--link-color);
-}
-
 .about-content {
-    padding-top: 1rem;
+    padding-top: 0;
 }
 
 .about-content a {
@@ -428,6 +409,18 @@ footer p {
     white-space: nowrap;
 }
 
+/* Show about six items; the rest scroll inside the box */
+.news-scroll {
+    max-height: 18rem;
+    overflow-y: auto;
+    padding-right: 0.75rem;
+    padding-bottom: 2rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-color) transparent;
+    -webkit-mask-image: linear-gradient(to bottom, black calc(100% - 2rem), transparent);
+    mask-image: linear-gradient(to bottom, black calc(100% - 2rem), transparent);
+}
+
 /* Simple bulleted lists (awards, service) */
 .simple-list {
     list-style: none;
@@ -517,6 +510,36 @@ footer p {
 }
 
 /* Responsive Design */
+@media (max-width: 900px) {
+    .page-layout {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .sidebar {
+        position: static;
+        max-height: none;
+        overflow: visible;
+        text-align: center;
+        padding-bottom: 0;
+    }
+
+    .sidebar-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem 1.25rem;
+    }
+
+    .sidebar-links li {
+        margin: 0;
+    }
+
+    .page-content > .section:first-child {
+        margin-top: 2rem;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 0 1rem;  /* Reduced padding on mobile */
@@ -534,17 +557,6 @@ footer p {
 
     #theme-toggle {
         padding: 0.25rem;  /* Reduced padding */
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .profile-container {
-        position: static;
-        max-width: 300px;
-        margin: 0 auto;
     }
 
     .about-content {
