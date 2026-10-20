@@ -83,6 +83,16 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeTheme();
     handleNavigation();
 
+    // Hide the "Scroll for more" note once the news box is scrolled to the end
+    const newsScroll = document.querySelector('.news-scroll');
+    const newsMore = document.querySelector('.news-more');
+    if (newsScroll && newsMore) {
+        newsScroll.addEventListener('scroll', () => {
+            const atEnd = newsScroll.scrollTop + newsScroll.clientHeight >= newsScroll.scrollHeight - 8;
+            newsMore.classList.toggle('hidden', atEnd);
+        });
+    }
+
     // CV click tracking: the link opens normally (no delayed window.open, which
     // pop-up blockers can stop); the beacon transport delivers the event anyway
     const cvLinks = document.querySelectorAll('a[href="/uploads/AnujDiwanCV.pdf"]');

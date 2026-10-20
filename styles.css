@@ -421,6 +421,22 @@ footer p {
     mask-image: linear-gradient(to bottom, black calc(100% - 2rem), transparent);
 }
 
+.news-more {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    opacity: 0.75;
+    transition: opacity 0.3s;
+}
+
+.news-more i {
+    margin-right: 0.35rem;
+    color: var(--link-color);
+}
+
+.news-more.hidden {
+    opacity: 0;
+}
+
 /* Simple bulleted lists (awards, service) */
 .simple-list {
     list-style: none;
